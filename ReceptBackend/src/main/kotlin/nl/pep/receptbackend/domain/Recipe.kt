@@ -1,4 +1,4 @@
-package nl.pep.receptbackend
+package nl.pep.receptbackend.domain
 
 import java.util.UUID
 
