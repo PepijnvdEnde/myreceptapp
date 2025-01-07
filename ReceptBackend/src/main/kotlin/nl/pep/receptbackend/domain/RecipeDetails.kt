@@ -12,6 +12,7 @@ data class RecipeDetails(
     val tags: List<Tags>,
     val ingredients: List<Ingredient>,
     val steps: List<String>,
+    val shortDescription: String,
     val description: String,
     val author: String,
     val date: LocalDate,
@@ -24,6 +25,7 @@ fun RecipeDetails.toRecipe(): Recipe {
         rating = this.rating,
         time = this.time,
         image = this.image,
-        tags = this.tags
+        tags = this.tags,
+        description = this.shortDescription
     )
 }

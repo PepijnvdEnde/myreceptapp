@@ -71,3 +71,23 @@ export function showTags(tags) {
 
     return iconArray;
 }
+
+export function makeGradient(tags) {
+    const colorMap = {
+        vegetarian: "green-400",
+        spicy: "red-400",
+        vegan: "green-600",
+        fish: "blue-500",
+        gluten: "amber-300",
+        dairy: "white",
+        peanuts: "yellow-900"
+    };
+
+    const baseColor = colorMap[tags[0]] || "black"; 
+    let gradientString = `bg-gradient-to-br from-${baseColor}`;
+
+    const viaColor = colorMap[tags[1]] || baseColor;
+    gradientString += ` via-50% to-${viaColor}`;
+
+    return gradientString;
+}

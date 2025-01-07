@@ -8,7 +8,8 @@ data class Recipe(
     val rating: Float,
     val time: Int,
     val image: String,
-    val tags: List<Tags>
+    val tags: List<Tags>,
+    val description: String
 ) 
 enum class Tags{
     vegetarian,

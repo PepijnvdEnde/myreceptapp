@@ -32,7 +32,7 @@ class RecipesPage extends React.Component {
             <body className="bg-gray-200">
             <NavBar />
             <div className="flex flex-col items-center min-h-screen">
-                <div className="bg-white w-3/4 min-h-screen pt-3">
+                <div className="bg-[#FAF8F6] w-3/4 min-h-screen pt-3">
                     <div className="md:grid-cols-3 grid auto-rows-auto gap-4 px-4">
                         {loading && <p>Loading recipes...</p>}
                         {error && <p className="text-red-500">Error: {error}</p>}

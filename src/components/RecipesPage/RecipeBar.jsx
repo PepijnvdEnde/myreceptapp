@@ -7,7 +7,7 @@ class RecipeBar extends React.Component {
     
 
     render() {
-        const { id, name, rating, time, image, tags } = this.props.recipe;
+        const { id, name, rating, time, image, tags, description } = this.props.recipe;
 
         return (
             <Link to={`/recept?id=${id}`} className="block">
@@ -18,14 +18,19 @@ class RecipeBar extends React.Component {
                             <p className="text-xl font-semibold">{name ?? "No name given."}</p>
                         </div>
                         <div className="flex-grow">
-                            <div className="flex items-center text-sm mb-2">
-                                <FaRegClock className="text-gray-500 mr-2"/> <p>{convertMinutesToHours(time)}</p>
-                            </div>
-                            <div className="flex items-center mb-2">
-                                {setStars(rating)}
+                            <div className="flex gap-2">
+                                <div className="flex items-center mb-2">
+                                    {setStars(rating)}
+                                </div>
+                                <div className="flex items-center text-sm mb-2">
+                                    <FaRegClock className="text-gray-500 mr-2"/> <p>{convertMinutesToHours(time)}</p>
+                                </div>
                             </div>
                             <div className="flex w-1/2 justify-start gap-1">
                                 {showTags(tags)}
+                            </div>
+                            <div>
+                                {description}
                             </div>
                         </div>
                     </div>
